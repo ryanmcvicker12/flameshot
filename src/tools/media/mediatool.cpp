@@ -1,8 +1,9 @@
-
+//Made by Ryan McVicker - 3.19.21
 #include "mediatool.h"
 #include "src/core/qguiappcurrentscreen.h"
 #include "src/tools/media/mediawidget.h"
 #include <QScreen>
+//TODO: give button icon
 
 MediaTool::MediaTool(QObject* parent) 
 	: AbstractActionTool(parent)
@@ -17,6 +18,7 @@ QIcon MediaTool::icon(const QColor& backround, bool inEditor) const
 {
 	Q_UNUSED(inEditor);
 	return QIcon(iconPath(backround) + "media.svg");// TODO: add media.svg
+}
 
 QString MediaTool::name() const
 {
@@ -31,11 +33,11 @@ ToolType MediaTool::nameID() const
 QString MediaTool::description() const
 {
 	return tr("Upload image to various social media platforms");
-{	
+}	
 
 QWidget* MediaTool::widget()
 {
-	qreal devicePixelRation = 1;
+	qreal devicePixelRatio = 1;
 #if defined(Q_OS_MACOS)
 	QScreen* currentScreen = QGuiAppCurrentScreen().currentScreen();
 	if(currentScreen) {
@@ -44,8 +46,8 @@ QWidget* MediaTool::widget()
 #endif
 	MediaWidget* w = new MediaWidget(m_pixmap);
 	const int m = w->margin() * devicePixelRatio;
-	QRect adjusted pos = m_geometry + QMargins(m, m, m, m);
-	w-setGeometry(adjusted_pos);
+	QRect adjusted_pos = m_geometry + QMargins(m, m, m, m);
+	w->setGeometry(adjusted_pos);
 #if defined(Q_OS_MACOS)
 	if(currentScreen) {
 		QPoint topLeft = currentScreen->geometry().topLeft();

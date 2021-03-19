@@ -33,7 +33,8 @@ enum class ToolType
     UNDO,
     UPLOAD,
     SIZEINCREASE,
-    SIZEDECREASE
+    SIZEDECREASE,
+    MEDIA
 };
 
 class CaptureTool : public QObject

@@ -1,7 +1,7 @@
 
 #pragma once
 
-#include "src/tools/abstractiontool.h"
+#include "src/tools/abstractactiontool.h"
 
 class MediaTool : public AbstractActionTool
 {
@@ -28,4 +28,4 @@ public slots:
 private:
 	QRect m_geometry;
 	QPixmap m_pixmap;
-}
+};

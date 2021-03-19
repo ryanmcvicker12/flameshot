@@ -104,9 +104,9 @@ CaptureTool* ToolFactory::CreateTool(CaptureToolButton::ButtonType t,
         case CaptureToolButton::TYPE_SIZEDECREASE:
             tool = new SizeDecreaseTool(parent);
             break;
-	case CaptureToolButton::TYPE_MEDIA:
-	    tool = new MediaTool(parent);
-	    break;
+        case CaptureToolButton::TYPE_MEDIA:
+            tool = new MediaTool(parent);
+            break;
         default:
             tool = nullptr;
             break;

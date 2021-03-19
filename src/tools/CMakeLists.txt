@@ -34,6 +34,13 @@ target_sources(
           pin/pinwidget.h
           pin/pintool.cpp
           pin/pinwidget.cpp)
+
+target_sources(
+  flameshot
+  PRIVATE media/mediatool.h
+          media/mediawidget.h
+          media/mediatool.cpp
+          media/mediawidget.cpp)
 target_sources(flameshot PRIVATE rectangle/rectangletool.h rectangle/rectangletool.cpp)
 target_sources(flameshot PRIVATE redo/redotool.h redo/redotool.cpp)
 target_sources(flameshot PRIVATE save/savetool.h save/savetool.cpp)
